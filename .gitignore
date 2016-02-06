@@ -1,0 +1,15 @@
+# Ignore configuration files that may contain sensitive information.
+settings.php
+*settings*.php
+services.yml
+*services*.yml
+
+# Ignore paths that contain generated content.
+cache/
+files/
+files/*
+themes/monoset.sass-cache/
+themes/monoset/.sass-cache/*
+themes/monoset/.sass-cache/
+*/.DS_Store/*
+*.DS_Store*
