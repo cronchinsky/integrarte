@@ -5,6 +5,7 @@ paxton-bootstrap:
       includes/bootstrap/css/bootstrap.min.css: {}
   js:
     includes/bootstrap/js/bootstrap.min.js: {}
+    includes/bootstrap/js/jquery.bootstrap-dropdown-hover.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax

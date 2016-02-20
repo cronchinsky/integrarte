@@ -496,3 +496,31 @@ table a:hover {
 .breadcrumb ol li:last-child a:after { border: 0; }
 .breadcrumb ol li a:hover { background: hsla(198, 84%, 41%, 1); }
 .breadcrumb ol li a:hover:after { border-left-color: hsla(198, 84%, 41%, 1) !important; }
+
+/* Integrate */
+body {  }
+
+#block-paxton-branding {
+	margin-top: 15px;
+	padding-bottom: 15px;
+}
+
+.navbar.mini-nav {
+    height: 117px;
+    box-shadow: 0 5px 5px rgba(50, 50, 50, 0.75)
+}
+
+#content {
+	margin-top: 117px;
+}
+
+#toolbar-administration {
+	display: none;
+}
+
+ 
+@media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+ }

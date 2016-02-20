@@ -61,7 +61,7 @@
 
 <!--start: Header and Navbar -->
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <!--start: Container -->
   <div class="container">
     <div class="row">
@@ -93,100 +93,104 @@
 </nav>
 <!--end: Header and Navbar -->
 
-<!--- Start: Page Title -->
-{%  if page.page_title and  not is_front %}
-
-  <div id="page-title">
-    <div id="page-title-inner">
-      <!-- start: Container -->
-      <div class="container">
-        {{ page.page_title }}
-      </div>
-    </div>
-  </div>
-{% endif %}
-<!--- End:Page Title -->
-
-<!-- start: Slider -->
-{% if is_front %}
-  <div class="slider-wrapper">
-    <div id="da-slider" class="da-slider">
-      {% for slider_contents in slider_content %}
-        {{ slider_contents | raw }}
-      {% endfor %}
-      <nav class="da-arrows">
-        <span class="da-arrows-prev"></span>
-        <span class="da-arrows-next"></span>
-      </nav>
-    </div>
-  </div>
-{% endif %}
-<!-- end: Slider -->
-
-<!--- Start:layout -->
-<div id="wrapper">
-  <!-- start: Container -->
-  <div class="container">
-    <!---Start:highlighted -->
-      {% if page.highlighted %}
-        <div class="jumbotron">
-          {{ page.highlighted }}
-        </div>
-      {% endif %}
-    <!---End:highlighted -->
-
-    <!---Start:content top -->
-      {% if page.content_top %}
-        <div class="row">
-          {{ page.content_top }}
-        </div>
-      {% endif %}
-    <!---End:Content top -->
-    <!-- start: Row -->
-    <!--start:content -->
-    <div class="row layout">
-      <!-- Start:Left SideBar -->
-      {% if page.sidebar_first %}
-        <div class="sidebar" >
-          <div class = {{  sidebarfirst }} >
-            {{ page.sidebar_first }}
-          </div>
-        </div>
-      {% endif %}
-      <!-- End:Right SideBar -->
-
-      <!-- Start:content -->
-      {% if page.content %}
-        <div class = " content_layout ">
-          <div class= {{ contentlayout }}>
-            {{ page.breadcrumb }}
-            {{ page.content }}
-          </div>
-        </div>
-      {% endif %}
-      <!-- End:content -->
-
-      <!-- Start:Right SideBar -->
-      {% if page.sidebar_second %}
-        <div class="sidebar">
-          <div class={{  sidebarsecond }}>
-            {{ page.sidebar_second }}
-          </div>
-        </div>
-      {% endif %}
-      <!-- End:Right SideBar -->
-    </div>
-    <!---End:Content -->
-    <!---Start:content bottom -->
-    {% if page.content_bottom %}
-      <div class="row">
-        {{ page.content_bottom }}
-      </div>
-    {% endif %}
-    <!-- End:Content Bottom -->
-  </div>
-</div>
-<!--- End:layout -->
+<!--- Start: Content -->
+<div id="content">
+	<!--- Start: Page Title -->
+	{%  if page.page_title and  not is_front %}
+	
+	  <div id="page-title">
+	    <div id="page-title-inner">
+	      <!-- start: Container -->
+	      <div class="container">
+	        {{ page.page_title }}
+	      </div>
+	    </div>
+	  </div>
+	{% endif %}
+	<!--- End:Page Title -->
+	
+	<!-- start: Slider -->
+	{% if is_front %}
+	  <div class="slider-wrapper">
+	    <div id="da-slider" class="da-slider">
+	      {% for slider_contents in slider_content %}
+	        {{ slider_contents | raw }}
+	      {% endfor %}
+	      <nav class="da-arrows">
+	        <span class="da-arrows-prev"></span>
+	        <span class="da-arrows-next"></span>
+	      </nav>
+	    </div>
+	  </div>
+	{% endif %}
+	<!-- end: Slider -->
+	
+	<!--- Start:layout -->
+	<div id="wrapper">
+	  <!-- start: Container -->
+	  <div class="container">
+	    <!---Start:highlighted -->
+	      {% if page.highlighted %}
+	        <div class="jumbotron">
+	          {{ page.highlighted }}
+	        </div>
+	      {% endif %}
+	    <!---End:highlighted -->
+	
+	    <!---Start:content top -->
+	      {% if page.content_top %}
+	        <div class="row">
+	          {{ page.content_top }}
+	        </div>
+	      {% endif %}
+	    <!---End:Content top -->
+	    <!-- start: Row -->
+	    <!--start:content -->
+	    <div class="row layout">
+	      <!-- Start:Left SideBar -->
+	      {% if page.sidebar_first %}
+	        <div class="sidebar" >
+	          <div class = {{  sidebarfirst }} >
+	            {{ page.sidebar_first }}
+	          </div>
+	        </div>
+	      {% endif %}
+	      <!-- End:Right SideBar -->
+	
+	      <!-- Start:content -->
+	      {% if page.content %}
+	        <div class = " content_layout ">
+	          <div class= {{ contentlayout }}>
+	            {{ page.breadcrumb }}
+	            {{ page.content }}
+	          </div>
+	        </div>
+	      {% endif %}
+	      <!-- End:content -->
+	
+	      <!-- Start:Right SideBar -->
+	      {% if page.sidebar_second %}
+	        <div class="sidebar">
+	          <div class={{  sidebarsecond }}>
+	            {{ page.sidebar_second }}
+	          </div>
+	        </div>
+	      {% endif %}
+	      <!-- End:Right SideBar -->
+	    </div>
+	    <!---End:Content -->
+	    <!---Start:content bottom -->
+	    {% if page.content_bottom %}
+	      <div class="row">
+	        {{ page.content_bottom }}
+	      </div>
+	    {% endif %}
+	    <!-- End:Content Bottom -->
+	  </div>
+	</div>
+	<!--- End:layout -->
+	</div>
+<!--- End:content -->
 
 <!-- start: Footer Menu -->
 {% if page.footer_menu %}
@@ -269,7 +273,7 @@
 	{{ page.footer_bottom }}
       {% endif %}
       <div class="clearfix"></div>
-      <div class="credited pull-left"><p class="text-center">{{ 'Paxton ported to drupal by'|t }} <a href="http://dropthemes.in" target="_blank">DropThemes.in</a></p></div>
+      <div class="credited pull-left"><p class="text-center"></p></div>
       {% if show_social_icons %}
 	<div class="social pull-right">
 	  <a href="{{ facebook_url }}"  class="bblue" target="_blank" ><i class="fa fa-facebook"></i></a>

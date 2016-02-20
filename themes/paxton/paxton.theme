@@ -25,6 +25,7 @@ use Drupal\file\Plugin\Core\Entity\FileInterface;
  */
 
 function paxton_preprocess_page(&$variables) {
+  //dpm($variables);
   // Add Responsive class for banner bottom.
   if (!empty($variables['page']['banner_bottom_first']) && !empty($variables['page']['banner_bottom_second']) && !empty($variables['page']['banner_bottom_third'])) {
     $variables['banner_bottom_class'] = 'col-lg-4';
