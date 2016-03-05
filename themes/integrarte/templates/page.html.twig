@@ -122,7 +122,7 @@
 	  <!-- start: Container -->
 	  <div class="container">
 	    <!---Start:highlighted -->
-	      {% if page.highlighted|striptags|trim %}
+	      {% if page.highlighted is not empty %}
 	        <div class="jumbotron">
 	          {{ page.highlighted }}
 	        </div>
