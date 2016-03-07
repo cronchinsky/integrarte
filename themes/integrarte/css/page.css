@@ -555,6 +555,16 @@ body {  }
   text-decoration: none;
 }
 
+.views-field-field-credits {
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+  font-family: Arial;
+  color: black;
+  font-size: 10px;
+}
+
+
 #block-homepagesummerprogram {
 	margin: 20px auto;
 	font-size: 1.8em;
@@ -575,7 +585,45 @@ body {  }
 	margin-bottom: 25px !important;
 }
 
+h3.tagline {
+	font-size: 22px !important;
+	margin-bottom: 20px !important;
+}
 
+
+/* application form */
+
+form h4.label {
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px !important;
+  color: #333;
+  font-weight: 700;
+  padding: 0;
+}
+
+.collapse-processed > summary:before {
+	background: none;
+}
+
+.field--name-field-address details,
+details#application-phone {
+	border: none;
+}
+
+.field--name-field-address details .details-wrapper,
+details#application-phone .details-wrapper {
+	padding-left: 0;
+}
+
+.field--name-field-address details > summary,
+details#application-phone  > summary{
+	padding-left: 0;
+	margin-left: -10px;
+}
+
+.field--type-telephone input {
+	display: block;
+}
  
 @media (min-width: 768px) {
     .dropdown:hover .dropdown-menu {
